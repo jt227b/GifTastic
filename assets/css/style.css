@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    background-image: url(../images/netflix.jpeg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+@media(max-width: 1300px){
+
+
+
+    body{
+        background-size: 1300px;
+    }
+    
+    
+    }

@@ -3,21 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <!-- Bootstrap container for website -->
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Sitcom Moments!</h1>
+            <h1 class="display-4">TV Sitcom Moments!</h1>
+
+            <!-- Will display buttons for Gif-->
             <div id="sitcomButtons"> </div>
             <hr class="my-4">
-            <p>Search for your favorite Sitcom Moment.</p>
+
+            <!-- Search Bar from bootstrap -->
+            <label id="add" for="sitcomInput">Search for your favorite TV Sitcom Moments.</label>
+            <input type="text" class="form-control" id="sitcomInput">
+            <br>
+
+            <!-- Button to search for more sitcoms -->
             <button onclick="submitButtonClicked()" id="addSitcoms" class="btn btn-primary btn-lg"
                 type="button">Submit</button>
+
+            <br>
+
+            <!-- Display Gifs Below -->
+            <div id="sitcoms"> </div>
         </div>
     </div>
 
