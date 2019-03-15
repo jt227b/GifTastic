@@ -3,7 +3,7 @@ var sitcomsArray = ["The Office", "Everybody Loves Raymond", "Friends", "That 70
 
 $(document).ready(function () {
     for (var i = 0; i < sitcomsArray.length; i++) {
-        $("#sitcomButtons").append("<button type='button' onclick='searchGif(\"" + sitcomsArray[i] + "\")' class='btn btn-primary' value=' " + sitcomsArray[i] + "'> " + sitcomsArray[i] + " </button>");
+        $("#sitcomButtons").append("<button type='button' onclick='searchGif(\"" + sitcomsArray[i] + "\")' class='btn btn-dark' value=' " + sitcomsArray[i] + "'> " + sitcomsArray[i] + " </button>");
     }
 });
 
@@ -18,7 +18,7 @@ function submitButtonClicked() {
     var userInput = $('#sitcomInput').val();
 
     if (userInput) {
-        $('#sitcomButtons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
+        $('#sitcomButtons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-dark' value=' " + userInput + "'> " + userInput + " </button>");
     }
 }
 
@@ -32,13 +32,14 @@ function searchGif(gifName) {
         })
 }
 
+// Function for GIFS //
 function displayGif(response) {
     $('#sitcoms').empty();
     for (var i = 0; i < response.data.length; i++) {
         var rating = "<div class='ratings'> Rating:  " + (response.data[i].rating) + " </div>";
         var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url +
             '" data-still=" ' + response.data[i].images.fixed_height_still.url +
-            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:250px; height:250px">';
+            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:300px; height:300px">';
 
 
         // Images inside container //
@@ -47,7 +48,7 @@ function displayGif(response) {
     }
 
 
-    // If/Else Movement //
+    // If/Else Gifs to play or stop //
     $('.movImage').on('click', function () {
         var state = $(this).attr('data-state');
         if (state == 'still') {

@@ -14,6 +14,23 @@ body{
     margin-bottom: 5px;
 }
 
+.jumbotron{
+    background-color: orangered;
+}
+
+.row{
+    display: inline-flex;
+}
+
+.ratings{
+padding-top: 15px;
+font-size: 15px;
+}
+
+a:link{
+    background-image: url(https://jt227b.github.io/GifTastic/);
+}
+
 
 
 

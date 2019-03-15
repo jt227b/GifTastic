@@ -12,25 +12,28 @@
     <!-- Bootstrap container for website -->
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">TV Sitcom Moments!</h1>
+            <h1 class="display-4"><strong>TV Sitcom Moments!</strong></h1>
 
             <!-- Will display buttons for Gif-->
             <div id="sitcomButtons"> </div>
             <hr class="my-4">
 
             <!-- Search Bar from bootstrap -->
-            <label id="add" for="sitcomInput">Search for your favorite TV Sitcom Moments.</label>
+            <label id="add" for="sitcomInput">Search for your favorite TV Sitcom Moment.</label>
             <input type="text" class="form-control" id="sitcomInput">
             <br>
 
             <!-- Button to search for more sitcoms -->
-            <button onclick="submitButtonClicked()" id="addSitcoms" class="btn btn-primary btn-lg"
+            <button onclick="submitButtonClicked()" id="addSitcoms" class="btn btn-dark btn-lg"
                 type="button">Submit</button>
 
             <br>
 
+
             <!-- Display Gifs Below -->
-            <div id="sitcoms"> </div>
+            <div class="row">
+                <div id="sitcoms"> </div>
+            </div>
         </div>
     </div>
 
