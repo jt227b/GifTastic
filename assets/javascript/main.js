@@ -24,7 +24,7 @@ function submitButtonClicked() {
 
 function searchGif(gifName) {
     $.ajax({
-        url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=TamrlyDzPVZgOk3WDx75JtbU7R9Blxt7',
+        url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &limit=10&api_key=TamrlyDzPVZgOk3WDx75JtbU7R9Blxt7',
         type: 'GET',
     })
         .done(function (response) {
